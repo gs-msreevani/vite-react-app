@@ -1,5 +1,6 @@
 // Login.jsx
 import React, { useState } from 'react';
+import {useAuth} from "../../AuthContext";
 import "./Login.css";
 const Login = () => {
     // State to store form field values
@@ -8,6 +9,8 @@ const Login = () => {
         email: '',
         accountName: ''
     });
+
+    const { isLoggedIn,login } = useAuth();
 
     // Handler for input changes
     const handleChange = (event) => {
@@ -21,6 +24,7 @@ const Login = () => {
     // Handler for form submission
     const handleSubmit = (event) => {
         event.preventDefault();
+        login();
         // For now, just log the form data to the console
         console.log('Form Data:', formData);
         //passing user and account objects:
@@ -42,8 +46,10 @@ const Login = () => {
 
         }
     };
-
-    return (
+  if(isLoggedIn){
+     return null;
+  }
+  return (
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Username:</label>

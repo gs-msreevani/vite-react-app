@@ -6,21 +6,19 @@ import About from "./components/Pages/About.jsx";
 import Contact from "./components/Pages/Contact.jsx";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login.jsx";
-import {useState} from "react";
+import Logout from "./components/Pages/Logout.jsx";
 
 function App() {
 
- const [isLoggedIn,setIsLoggedIn] = useState(false);
-
-
   return (
     <>
-        <Navbar isLoggedIn={isLoggedIn}/>
+        <Navbar/>
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/logout" element={<Logout/>}/>
         </Routes>
     </>
   )

@@ -13,6 +13,18 @@ nav{
 }
 
 .navbar_list a.active{
-    font-weight: 500;
+    font-weight: bold;
     color: blue;
+}
+.li-item{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.li-item a{
+    text-decoration: none;
+}
+
+#login a{
+    font-size: x-large;
 }
