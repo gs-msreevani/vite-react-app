@@ -1,6 +1,6 @@
 
 import './App.css'
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route,Navigate} from 'react-router-dom';
 import Home from "./components/Pages/Home.jsx";
 import About from "./components/Pages/About.jsx";
 import Contact from "./components/Pages/Contact.jsx";
@@ -15,10 +15,13 @@ function App() {
         <Navbar/>
         <Routes>
             <Route path="/" element={<Home/>}/>
+            <Route path="/welcome" element={<Home />} />
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/welcome" element={<Login/>}/>
             <Route path="/logout" element={<Logout/>}/>
+            {/* navigate the route to homepage when invalid url is entered */}
+            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     </>
   )
