@@ -16,7 +16,7 @@ const Navbar =()=>{
                         </>
                     ) :
                     (
-                        <li className="li-item" id="login"><NavLink to='/welcome'>WELCOME</NavLink></li>
+                        <li className="li-item" id="login"><NavLink to='/welcome'>LOGIN</NavLink></li>
                     )}
             </ul>
         </nav>
