@@ -13,7 +13,6 @@ export const AuthProvider = ({ children }) => {
             setIsLoggedIn(JSON.parse(storedStatus));
         }
     }, []);
-
     const login = () => {
         setIsLoggedIn(true);
         localStorage.setItem('isLoggedIn', true);

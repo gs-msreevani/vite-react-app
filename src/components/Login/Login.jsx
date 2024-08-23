@@ -1,6 +1,7 @@
 // Login.jsx
 import React, { useState } from 'react';
 import {useAuth} from "../../AuthContext";
+import {useNavigate} from "react-router-dom";
 import "./Login.css";
 const Login = () => {
     // State to store form field values
@@ -9,7 +10,7 @@ const Login = () => {
         email: '',
         accountName: ''
     });
-
+    const navigate = useNavigate();
     const { isLoggedIn,login } = useAuth();
 
     // Handler for input changes
@@ -47,7 +48,9 @@ const Login = () => {
         }
     };
   if(isLoggedIn){
-     return null;
+      // Navigate to the root path
+      navigate('/');
+      return null;
   }
   return (
         <form onSubmit={handleSubmit}>
