@@ -1,6 +1,15 @@
-import {Link} from "react-router-dom";
+import {Link,useSearchParams} from "react-router-dom";
 
 const Products = ()=>{
+    const [searchParams,setSearchParams]= useSearchParams();
+    const sortBy = searchParams.get("sortBy");
+    const category = searchParams.get("category");
+    const handleSortBy = ()=>{
+        setSearchParams({
+            sortBy:"name",
+            category,
+        })
+    }
     return(
         <div>
             <h2>Products</h2>
@@ -15,6 +24,8 @@ const Products = ()=>{
                     <Link to='/products/3'>Product 3</Link>
                 </li>
             </ul>
+            <h3>SortBy:{sortBy} Category:{category}</h3>
+            <button onClick={handleSortBy}>sortby-name</button>
         </div>
     )
 }
