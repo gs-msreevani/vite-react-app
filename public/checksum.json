@@ -1,0 +1,29 @@
+{
+  "engagementChecksums": [
+    {
+      "engagementId": "7b2c8fbb-f4a9-4b3f-bf1b-2517bc18694b",
+      "validChecksums": [
+        "3abf7572078497cea808cee8cd9982b01a1b73b084df6a2279dfac8c2b6f0ce0"
+      ]
+    },
+    {
+      "engagementId": "0a5ffc88-7432-40ae-ab0e-1c1805f45d0b",
+      "validChecksums": [
+        "a89f15881447dac82fba74d13361815e9a95f11f58eb960a737e2a7ec225bff3"
+      ]
+    }
+  ],
+  "botChecksums": [
+    {
+      "botId": "7af0adf8-2631-45cf-bf26-8e0a3859e27b",
+      "validConfigChecksums": [
+        "8bf9cd6b827b2ec39dd02296e31cc0c1377d7efd240aceed3729679d59847802"
+      ],
+      "validContentChecksums": [
+        "e73862f776067c826bf6939850017076af28876ed13c448a5aa3979408b5564d"
+      ]
+    }
+  ],
+  "engFieldMappingEnabled": true,
+  "checksumVersion": 4
+}

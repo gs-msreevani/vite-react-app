@@ -25,9 +25,9 @@ function App() {
             <Route path="/products" element={<Products/>}/>
             <Route path="/products/:id" element={<SingleProduct/>}/>
             <Route path="/logout" element={<Logout/>}/>
-            {/* If we want to navigate the route to homepage when invalid url is entered }
-            <Route path="*" element={<Navigate to="/" replace />} />*/}
-            <Route path="*" element={<NotFoundPage />} />
+            {/* If we want to navigate the route to homepage when invalid url is entered }*/}
+            <Route path="*" element={<Navigate to="/" replace />} />
+            {/*<Route path="*" element={<NotFoundPage />} />*/}
         </Routes>
     </>
   )
