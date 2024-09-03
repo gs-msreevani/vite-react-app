@@ -10,6 +10,7 @@ import Logout from "./components/Pages/Logout.jsx";
 import NotFoundPage from "./components/Pages/NotFoundPage.jsx";
 import Products from "./components/Pages/Products.jsx";
 import SingleProduct from "./components/Pages/SingleProduct.jsx";
+import Guide from "./components/Pages/Guide.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/guide" element={<Guide/>}/>
             <Route path="/products/:id" element={<SingleProduct/>}/>
             <Route path="/logout" element={<Logout/>}/>
             {/* If we want to navigate the route to homepage when invalid url is entered }*/}
