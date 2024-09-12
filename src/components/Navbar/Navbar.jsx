@@ -14,6 +14,7 @@ const Navbar =()=>{
                             <li className="li-item"><NavLink to='/contact'>Contact</NavLink></li>
                             <li className="li-item"><NavLink to='/products'>Products</NavLink></li>
                             <li className="li-item"><NavLink to='/guide'>Guide</NavLink></li>
+                            <li className="li-item"><NavLink to='/survey'>Survey</NavLink></li>
                             <li className="li-item"><NavLink to='/logout'>Logout</NavLink></li>
                         </>
                     ) :
