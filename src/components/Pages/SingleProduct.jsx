@@ -6,7 +6,7 @@ const SingleProduct = ()=>{
         window.aptrinsic("track","placed",{"placed":"yes"});
     }
     const sendFeedback = ()=>{
-        window.aptrinsic('send', 'feedback', {'category' : 'Ticket', 'subject' : 'feedback feature API', 'description' : 'put your feedback here'});
+        window.aptrinsic('send', 'feedback', {'category' : 'Feature request', 'subject' : 'feedback feature API', 'description' : 'put your feedback here'});
     }
     return(
         <>
