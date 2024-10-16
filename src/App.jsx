@@ -43,10 +43,10 @@ function App() {
 
           <div className="App">
               <h1>Modal Overlay Example</h1>
-              <button onClick={openModal}>Open Modal</button>
+              <button id="modalbtn" onClick={openModal}>Open Modal</button>
               <Modal isOpen={isModalOpen} onClose={closeModal}>
-                  <h2>Modal Title</h2>
-                  <p>This is the modal content!</p>
+                  <h2 id="heading">Modal Title</h2>
+                  <p id="para">This is the modal content!</p>
               </Modal>
           </div>
 
