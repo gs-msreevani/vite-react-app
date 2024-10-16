@@ -1,5 +1,6 @@
 
-import './App.css'
+import './App.css';
+import React, { useState } from 'react';
 import {Routes,Route,Navigate} from 'react-router-dom';
 import Home from "./components/Pages/Home.jsx";
 import About from "./components/Pages/About.jsx";
@@ -12,28 +13,44 @@ import Products from "./components/Pages/Products.jsx";
 import SingleProduct from "./components/Pages/SingleProduct.jsx";
 import Guide from "./components/Pages/Guide.jsx";
 import Survey from "./components/Pages/Survey.jsx";
-
+import Sellers from "./components/Pages/Sellers.jsx";
+import Modal from "./components/Modaloverlay/Modal.jsx";
 function App() {
+    const [isModalOpen, setModalOpen] = useState(false);
 
-  return (
-    <>
-        <Navbar/>
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/welcome" element={<Home />} />
-            <Route path="/about" element={<About/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/products" element={<Products/>}/>
-            <Route path="/guide" element={<Guide/>}/>
-            <Route path="/survey" element={<Survey/>}/>
-            <Route path="/products/:id" element={<SingleProduct/>}/>
-            <Route path="/logout" element={<Logout/>}/>
-            {/* If we want to navigate the route to homepage when invalid url is entered }*/}
-            <Route path="*" element={<Navigate to="/" replace />} />
-            {/*<Route path="*" element={<NotFoundPage />} />*/}
-        </Routes>
-    </>
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
+
+    return (
+      <>
+          <Navbar/>
+          <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/welcome" element={<Home/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/products" element={<Products/>}/>
+              <Route path="/sellers" element={<Sellers/>}/>
+              <Route path="/guide" element={<Guide/>}/>
+              <Route path="/survey" element={<Survey/>}/>
+              <Route path="/products/:id" element={<SingleProduct/>}/>
+              <Route path="/logout" element={<Logout/>}/>
+              {/* If we want to navigate the route to homepage when invalid url is entered }*/}
+              <Route path="*" element={<Navigate to="/" replace/>}/>
+              {/*<Route path="*" element={<NotFoundPage />} />*/}
+          </Routes>
+
+          <div className="App">
+              <h1>Modal Overlay Example</h1>
+              <button onClick={openModal}>Open Modal</button>
+              <Modal isOpen={isModalOpen} onClose={closeModal}>
+                  <h2>Modal Title</h2>
+                  <p>This is the modal content!</p>
+              </Modal>
+          </div>
+
+      </>
   )
 }
 
