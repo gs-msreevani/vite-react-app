@@ -25,7 +25,7 @@ function App() {
       <>
           <Navbar/>
           <Routes>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={<Home/>} exact/>
               <Route path="/welcome" element={<Home/>}/>
               <Route path="/about" element={<About/>}/>
               <Route path="/contact" element={<Contact/>}/>
@@ -42,12 +42,7 @@ function App() {
           </Routes>
 
           <div className="App">
-              <h1>Modal Overlay Example</h1>
-              <button id="modalbtn" onClick={openModal}>Open Modal</button>
-              <Modal isOpen={isModalOpen} onClose={closeModal}>
-                  <h2 id="heading">Modal Title</h2>
-                  <p id="para">This is the modal content!</p>
-              </Modal>
+            
           </div>
 
       </>
