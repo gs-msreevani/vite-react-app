@@ -13,7 +13,7 @@ const SingleProduct = ()=>{
             <h2>This is Single Product - {id} </h2>
             <button onClick={placeOrder}>Place Order</button>
             <button onClick={sendFeedback}>Feedback</button>
-            <a href="/vite-react-app/products">Products</a>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
         </>
     )
 }
