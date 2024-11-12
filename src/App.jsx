@@ -16,10 +16,7 @@ import Survey from "./components/Pages/Survey.jsx";
 import Sellers from "./components/Pages/Sellers.jsx";
 import Modal from "./components/Modaloverlay/Modal.jsx";
 function App() {
-    const [isModalOpen, setModalOpen] = useState(false);
-
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+   
 
     return (
       <>
