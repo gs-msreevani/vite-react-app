@@ -18,6 +18,9 @@ const Contact = ()=>{
             <button id='GM' onClick={()=>handleRole("GM")}>GM</button>
             <button id='SM' onClick={()=>handleRole("SM")}>SM</button>
             <button id='FM' onClick={()=>handleRole("FM")}>FM</button>
+            <h2 data-new="new-one"> "Environmental, Social, Governance" 
+            <span data-new="new2"></span>
+            </h2>
         </>
 
     )
