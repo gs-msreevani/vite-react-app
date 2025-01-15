@@ -15,6 +15,9 @@ import Guide from "./components/Pages/Guide.jsx";
 import Survey from "./components/Pages/Survey.jsx";
 import Sellers from "./components/Pages/Sellers.jsx";
 import Modal from "./components/Modaloverlay/Modal.jsx";
+import NavigationButtons from './NavigationButtons.jsx';
+import OrderPage from './OrderPage.jsx';
+
 function App() {
    
 
@@ -36,10 +39,11 @@ function App() {
               {/* If we want to navigate the route to homepage when invalid url is entered }*/}
               <Route path="*" element={<Navigate to="/" replace/>}/>
               {/*<Route path="*" element={<NotFoundPage />} />*/}
+             
           </Routes>
 
           <div className="App">
-            
+           <NavigationButtons />
           </div>
 
       </>

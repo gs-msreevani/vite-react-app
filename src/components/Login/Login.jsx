@@ -29,6 +29,8 @@ const Login = () => {
         // For now, just log the form data to the console
         console.log('Form Data:', formData);
         //passing user and account objects:
+        let accountId = formData.accountName;
+        let preferredcaseaID = accountId.toLowerCase();
         if(window.aptrinsic){
             aptrinsic("identify",
                 {
@@ -41,7 +43,7 @@ const Login = () => {
                 },
                 {
                     //Account Fields
-                    "id":formData.accountName, //Required
+                    "id":preferredcaseaID, //Required
                     "name":formData.accountName
                 });
 
