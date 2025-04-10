@@ -27,7 +27,7 @@ const Contact = () => {
       </button>
       <h2 data-new="new-one">
         {" "}
-        "Environmental, Social, Governance"
+        "Environmental, Social, Governances"
         <span data-new="new2"></span>
       </h2>
       <button
